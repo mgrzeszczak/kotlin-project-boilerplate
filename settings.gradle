@@ -1,2 +1,5 @@
 rootProject.name = 'kotlin-project-boilerplate'
 
+include ':module',
+        ':app'
+

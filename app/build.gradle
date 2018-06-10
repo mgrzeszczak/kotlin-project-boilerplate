@@ -1,0 +1,12 @@
+dependencies {
+    compile project(':module')
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.github.mgrzeszczak.kotlinprojectboilerplate.AppKt'
+        )
+    }
+}
